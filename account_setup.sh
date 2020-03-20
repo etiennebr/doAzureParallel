@@ -1,7 +1,12 @@
 #!/bin/bash
 
 echo "Installing dependencies..." &&
-pip install --force-reinstall --upgrade --user pyyaml==3.12 azure==3.0.0 azure-cli-core==2.0.30 msrestazure==0.4.25 > /dev/null 2>&1 &&
+pip install --force-reinstall --upgrade --user \
+  pyyaml==5.3 \
+  azure==4.0.0 \
+  azure-cli-core==2.2.0 \
+  msrestazure==0.6.2 \
+  > /dev/null 2>&1 &&
 echo "Finished installing dependencies." &&
 echo "Getting account setup script..." &&
 wget -q https://raw.githubusercontent.com/Azure/doAzureParallel/master/account_setup.py -O account_setup.py &&
